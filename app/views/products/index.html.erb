@@ -1,0 +1,12 @@
+<ul>
+    <%= cart.each do |product|%>
+    <li><%= product %></li>
+    <% end %>
+</ul>
+<!--create a tag that adds products to the cart - make a submit button that says "Add to Cart"-->
+<%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do %>
+<input name=product>
+<input type=submit value='add to cart'>
+<% end %>
+<!--Shows everything in the cart - iterate over the cart to see each product-->
+<!--The page should have, at a minimum: a text box where the user can enter the name of a product, a submit button that adds it to their cart, and a display of what's in the cart-->
